@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Noah's Web Design - Simple websites for local businesses</title>
+<meta name="description" content="Simple, modern websites for local businesses - live in a week. $499 one-time, optional $39/month care plan.">
+<style>
+:root{--bg:#faf8f4;--ink:#1d2433;--mut:#5b6475;--acc:#1f6f5c;--card:#fff;--line:#e6e1d6}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font-weight:700;letter-spacing:-.01em}
+nav a{color:var(--mut);text-decoration:none;margin-left:18px;font-size:15px}
+nav a:hover{color:var(--acc)}
+.hero{padding:56px 0 48px}
+h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.1;margin:0 0 18px;letter-spacing:-.02em;max-width:18em}
+.lead{font-size:1.15rem;color:var(--mut);max-width:40em}
+.btn{display:inline-block;background:var(--acc);color:#fff;text-decoration:none;padding:13px 24px;border-radius:10px;font-weight:600;margin-top:18px}
+.btn:hover{filter:brightness(1.1)}
+.btn.ghost{background:transparent;color:var(--acc);border:2px solid var(--acc);margin-left:8px}
+section{padding:44px 0}
+h2{font-size:1.8rem;margin:0 0 8px;letter-spacing:-.01em}
+.sub{color:var(--mut);margin:0 0 26px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{margin:0 0 6px}
+.tag{display:inline-block;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--acc);font-weight:700;margin-bottom:8px}
+.mock{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 6px 20px rgba(29,36,51,.08)}
+.mbar{display:flex;gap:5px;padding:8px 10px;background:#eee9de}
+.mbar i{width:9px;height:9px;border-radius:50%;background:#c9c2b2;display:block}
+.mnav{display:flex;justify-content:space-between;padding:8px 12px;font-size:12px;font-weight:700}
+.mnav span:last-child{font-weight:400;opacity:.7}
+.mhero{padding:22px 14px;color:#fff;min-height:130px}
+.mhero b{display:block;font-size:17px;line-height:1.2;margin-bottom:6px}
+.mhero small{display:block;opacity:.9;font-size:12px;margin-bottom:10px}
+.mhero em{font-style:normal;background:#fff;color:#222;font-size:11px;font-weight:700;padding:5px 10px;border-radius:6px}
+.mrow{display:flex;gap:6px;padding:10px 12px 14px;flex-wrap:wrap}
+.mrow span{font-size:11px;background:#f2efe7;border-radius:20px;padding:4px 10px}
+.label{text-align:center;font-size:12px;color:var(--mut);padding:8px 0 0}
+.m1 .mhero{background:linear-gradient(135deg,#1e5fa8,#2f8fd1)}
+.m2 .mhero{background:linear-gradient(135deg,#1c1c1c,#6b4a2b)}
+.m3 .mhero{background:linear-gradient(135deg,#d9531e,#f2a33a)}
+.price{font-size:2.2rem;font-weight:800;margin:4px 0}
+.price small{font-size:1rem;font-weight:500;color:var(--mut)}
+ul.tick{list-style:none;padding:0;margin:12px 0 0}
+ul.tick li{padding-left:26px;position:relative;margin:7px 0}
+ul.tick li:before{content:"\2713";position:absolute;left:0;color:var(--acc);font-weight:800}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;counter-increment:s}
+.step:before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--acc);color:#fff;font-weight:700;margin-bottom:10px}
+.step h3{margin:0 0 4px}
+.step p{margin:0;color:var(--mut);font-size:15px}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600}
+details p{margin:10px 0 0;color:var(--mut)}
+.contact{text-align:center;background:var(--ink);color:#fff;border-radius:18px;padding:44px 20px}
+.contact p{color:#c9cfdb;max-width:34em;margin:8px auto}
+.contact .btn{background:#fff;color:var(--ink)}
+footer{padding:30px 0 40px;color:var(--mut);font-size:14px;text-align:center}
+@media(max-width:560px){nav a:not(:last-child){display:none}.btn.ghost{margin:10px 0 0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><div class="logo">Noah's Web Design</div><nav><a href="#samples">Samples</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav></header>
+
+<div class="hero">
+<h1>Simple, modern websites for local businesses - live in a week.</h1>
+<p class="lead">Hi, I'm Noah. I build clean, fast websites for small businesses across the US. I do it with help from my AI assistant, Jarvis, which drafts and polishes the work quickly so I can keep prices low. I review everything before it reaches you, and you deal with a real person.</p>
+<a class="btn" href="mailto:cozy-season@inkboxmail.com?subject=Website%20question">Email me</a><a class="btn ghost" href="#samples">See sample designs</a>
+</div>
+
+<section id="samples">
+<h2>Sample designs</h2>
+<p class="sub">These are made-up example businesses, built to show the style. They are not real clients.</p>
+<div class="grid">
+<div><div class="mock m1"><div class="mbar"><i></i><i></i><i></i></div><div class="mnav"><span>Clearwater Plumbing</span><span>Services &middot; Contact</span></div><div class="mhero"><b>Fast, honest plumbing repairs</b><small>Same-day service &middot; Free estimates</small><em>Call now</em></div><div class="mrow"><span>Leaks</span><span>Water heaters</span><span>Drains</span></div></div><div class="label">Sample design - example plumber</div></div>
+<div><div class="mock m2"><div class="mbar"><i></i><i></i><i></i></div><div class="mnav"><span>Sharp Edge Barbers</span><span>Menu &middot; Book</span></div><div class="mhero"><b>Classic cuts, modern fades</b><small>Walk-ins welcome &middot; Mon-Sat</small><em>Book a chair</em></div><div class="mrow"><span>Haircut</span><span>Beard trim</span><span>Hot towel shave</span></div></div><div class="label">Sample design - example barber</div></div>
+<div><div class="mock m3"><div class="mbar"><i></i><i></i><i></i></div><div class="mnav"><span>Taco Wagon</span><span>Menu &middot; Find us</span></div><div class="mhero"><b>Street tacos, made fresh</b><small>Today's location, always up to date</small><em>See the menu</em></div><div class="mrow"><span>Tacos</span><span>Burritos</span><span>Catering</span></div></div><div class="label">Sample design - example food truck</div></div>
+</div>
+</section>
+
+<section id="pricing">
+<h2>What's included</h2>
+<p class="sub">Straightforward pricing. No surprises.</p>
+<div class="grid">
+<div class="card"><span class="tag">Website</span><div class="price">$499 <small>one-time</small></div>
+<ul class="tick"><li>5-page site</li><li>Mobile-friendly design</li><li>Contact form</li><li>Google Maps</li><li>1 round of changes</li></ul></div>
+<div class="card"><span class="tag">Optional care plan</span><div class="price">$39 <small>/ month</small></div>
+<ul class="tick"><li>Hosting</li><li>Small edits when you need them</li><li>Keeping it online</li><li>Cancel any time</li></ul></div>
+</div>
+</section>
+
+<section>
+<h2>How it works</h2>
+<p class="sub">No commitment until you've seen your site.</p>
+<div class="steps">
+<div class="step"><h3>Free preview</h3><p>I build a preview of your site so you can see it before deciding.</p></div>
+<div class="step"><h3>Say yes</h3><p>Like it? Just reply and tell me. Want tweaks? Tell me what to change.</p></div>
+<div class="step"><h3>Pay the invoice</h3><p>You get a secure invoice link. I never see your card details.</p></div>
+<div class="step"><h3>Live in a week</h3><p>Your site goes live within about a week.</p></div>
+</div>
+</section>
+
+<section id="faq">
+<h2>FAQ</h2>
+<p class="sub">&nbsp;</p>
+<details><summary>Who owns the website?</summary><p>You do. The site is yours, and I can hand over the files whenever you ask.</p></details>
+<details><summary>What about hosting?</summary><p>Hosting is covered by the optional $39/month care plan, which also keeps your site online. If you'd rather host it elsewhere, I can give you the files.</p></details>
+<details><summary>Can I make changes later?</summary><p>Yes. One round of changes is included with the website. After that, small edits are covered by the care plan, or we can agree a price for bigger changes.</p></details>
+<details><summary>Do I pay before seeing anything?</summary><p>No. You see a free preview first and only pay if you want to go ahead.</p></details>
+<details><summary>Is there really an AI involved?</summary><p>Yes. Jarvis, my AI assistant, helps me draft and build. I review the work and I'm the person you talk to.</p></details>
+</section>
+
+<section id="contact">
+<div class="contact"><h2>Let's talk</h2><p>Questions, or want to see a preview for your business? Send me an email.</p><a class="btn" href="mailto:cozy-season@inkboxmail.com">cozy-season@inkboxmail.com</a></div>
+</section>
+
+<footer>Noah's Web Design &middot; 1134 Stevenson Ave, Clearwater, FL 33755</footer>
+</div>
+</body>
+</html>
