@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Taco Wagon (sample design) - Noah's Web Design</title>
+<meta name="description" content="A sample food truck website made by Noah's Web Design. Taco Wagon is a made-up business, not a real food truck.">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light">
+<meta property="og:title" content="Sample food truck website - Noah's Web Design">
+<meta property="og:description" content="A made-up example business showing the style of site Noah builds.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff6b35'/%3E%3Cpath d='M12 42a20 20 0 0 1 40 0z' fill='%23ffd166'/%3E%3C/svg%3E">
+<style>
+:root{--orange:#ff6b35;--deep:#2b1408;--cream:#fff6e5;--yellow:#ffd166;--green:#2a9d5c;--mut:#6b4a36;--line:#f0dcc0}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--deep);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:#b33c0f}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{margin:0;line-height:1.05;letter-spacing:-.02em;font-weight:900}
+.demo{background:var(--deep);color:#fff;font-size:14px;text-align:center;padding:9px 16px}
+.demo a{color:var(--yellow);font-weight:700}
+header{position:sticky;top:0;z-index:10;background:var(--cream);border-bottom:3px solid var(--deep)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:66px;gap:16px}
+.logo{font-weight:900;font-size:24px;color:var(--deep);text-decoration:none;text-transform:uppercase;letter-spacing:-.02em}
+.logo span{color:#c94a14}
+nav{display:flex;gap:22px;align-items:center}
+nav a{color:var(--deep);text-decoration:none;font-weight:800;font-size:15px}
+nav a:hover{color:#c94a14}
+.btn{display:inline-block;background:var(--deep);color:var(--yellow)!important;padding:13px 22px;border-radius:999px;font-weight:900;text-decoration:none;border:3px solid var(--deep);box-shadow:4px 4px 0 var(--deep);transition:transform .1s,box-shadow .1s}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--deep)}
+.btn.y{background:var(--yellow);color:var(--deep)!important}
+header .btn{padding:8px 16px;box-shadow:none}
+.hero{background:#e8571f;color:#fff;padding:72px 0 84px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}
+.hero h1{font-size:clamp(2.8rem,8vw,5.6rem);text-transform:uppercase;color:#fff;text-shadow:3px 3px 0 var(--deep);margin-bottom:18px}
+.hero p{font-size:1.2rem;max-width:28em;margin:0 0 26px;color:#1f0d04;font-weight:600}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.today{background:var(--cream);color:var(--deep);border:3px solid var(--deep);border-radius:20px;padding:24px;box-shadow:8px 8px 0 var(--deep);transform:rotate(1.5deg)}
+.today small{font-weight:900;text-transform:uppercase;letter-spacing:.1em;color:#b33c0f}
+.today h2{font-size:1.8rem;margin:6px 0 8px}
+.today p{margin:0;color:var(--mut);font-weight:600}
+section{padding:72px 0}
+.title{margin-bottom:32px}
+.title h2{font-size:clamp(2.2rem,5vw,3.4rem);text-transform:uppercase}
+.title p{color:var(--mut);margin:6px 0 0}
+.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.dish{background:#fff;border:3px solid var(--deep);border-radius:18px;padding:22px;box-shadow:5px 5px 0 var(--deep)}
+.dish .em{font-size:38px;line-height:1;margin-bottom:10px}
+.dish h3{font-size:1.35rem;display:flex;justify-content:space-between;gap:10px}
+.dish h3 b{color:#b33c0f}
+.dish p{margin:6px 0 0;color:var(--mut);font-size:15px}
+.stops{background:var(--yellow);border-top:3px solid var(--deep);border-bottom:3px solid var(--deep)}
+.stoplist{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stop{background:var(--cream);border:3px solid var(--deep);border-radius:16px;padding:18px}
+.stop b{display:block;text-transform:uppercase;font-size:14px;letter-spacing:.08em;color:#b33c0f}
+.stop h3{font-size:1.15rem;margin:6px 0 4px}
+.stop p{margin:0;font-size:15px;color:var(--mut)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.card{background:#fff;border:3px solid var(--deep);border-radius:18px;padding:26px}
+form{display:grid;gap:12px}
+label{font-weight:800;font-size:15px}
+input,textarea{font:inherit;width:100%;padding:11px 13px;border:2px solid var(--deep);border-radius:10px;margin-top:4px;background:var(--cream)}
+button{font:inherit;font-weight:900;background:var(--orange);color:var(--deep);border:3px solid var(--deep);border-radius:999px;padding:12px;cursor:pointer}
+button:hover{background:var(--yellow)}
+.phone{font-size:2rem;font-weight:900;color:var(--deep);text-decoration:none}
+footer{background:var(--deep);color:#e8d3bc;text-align:center;padding:28px 0;font-size:14px}
+footer a{color:var(--yellow)}
+@media(max-width:860px){.hero .wrap,.two{grid-template-columns:1fr}.menu{grid-template-columns:1fr 1fr}.stoplist{grid-template-columns:1fr 1fr}nav a:not(.btn){display:none}.today{transform:none}}
+@media(max-width:520px){.menu,.stoplist{grid-template-columns:1fr}.hero{padding:52px 0 60px}section{padding:52px 0}.logo{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="demo">Sample design by <a href="../../">Noah's Web Design</a> - not a real business</div>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#">Taco <span>Wagon</span></a>
+    <nav><a href="#menu">Menu</a><a href="#find">Find us</a><a href="#catering">Catering</a><a class="btn" href="tel:5550100000">Call</a></nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Street tacos, made fresh.</h1>
+      <p>Hand-pressed tortillas, slow-cooked fillings and salsas made every morning. Find the truck, grab a plate, be happy.</p>
+      <div class="btns"><a class="btn y" href="#menu">See the menu</a><a class="btn" href="#find">Where we are this week</a></div>
+    </div>
+    <div class="today">
+      <small>Parked today</small>
+      <h2>Riverside Park lot</h2>
+      <p>11am &ndash; 3pm &middot; Card &amp; cash accepted</p>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="title"><h2>The menu</h2><p>Corn or flour tortillas. Ask about vegan options.</p></div>
+    <div class="menu">
+      <div class="dish"><div class="em" aria-hidden="true">&#127790;</div><h3>Carne asada <b>$4</b></h3><p>Grilled steak, onion, cilantro, salsa verde.</p></div>
+      <div class="dish"><div class="em" aria-hidden="true">&#127790;</div><h3>Al pastor <b>$4</b></h3><p>Marinated pork, pineapple, onion, cilantro.</p></div>
+      <div class="dish"><div class="em" aria-hidden="true">&#127790;</div><h3>Veggie <b>$3.50</b></h3><p>Roasted peppers, black beans, queso fresco.</p></div>
+      <div class="dish"><div class="em" aria-hidden="true">&#127791;</div><h3>Big burrito <b>$11</b></h3><p>Any filling, rice, beans, cheese, salsa.</p></div>
+      <div class="dish"><div class="em" aria-hidden="true">&#129472;</div><h3>Loaded nachos <b>$9</b></h3><p>Chips, cheese, pico, crema, jalape&ntilde;os.</p></div>
+      <div class="dish"><div class="em" aria-hidden="true">&#129380;</div><h3>Agua fresca <b>$3</b></h3><p>Horchata or hibiscus, made fresh daily.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="stops" id="find">
+  <div class="wrap">
+    <div class="title"><h2>Find us this week</h2><p style="color:var(--deep)">Hours: Tuesday to Saturday. Closed Sunday and Monday.</p></div>
+    <div class="stoplist">
+      <div class="stop"><b>Tue &ndash; Wed</b><h3>Riverside Park lot</h3><p>11am &ndash; 3pm</p></div>
+      <div class="stop"><b>Thursday</b><h3>Office park, Gate 2</h3><p>11am &ndash; 2pm</p></div>
+      <div class="stop"><b>Friday</b><h3>Brewery night</h3><p>5pm &ndash; 10pm</p></div>
+      <div class="stop"><b>Saturday</b><h3>Farmers market</h3><p>9am &ndash; 2pm</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="catering">
+  <div class="wrap two">
+    <div>
+      <div class="title"><h2>Catering &amp; contact</h2><p>We bring the truck to parties, weddings and work events.</p></div>
+      <p style="margin:0 0 4px;color:var(--mut);font-weight:700">Call or text</p>
+      <a class="phone" href="tel:5550100000">(555) 010-0000</a>
+      <p style="margin:16px 0 0;color:var(--mut)">Or email <a href="mailto:hola@example.com">hola@example.com</a></p>
+    </div>
+    <form class="card" onsubmit="event.preventDefault();this.querySelector('button').textContent='This is a demo - nothing was sent';">
+      <label>Your name<input required></label>
+      <label>Event date<input type="date"></label>
+      <label>How many guests?<input type="number" min="1"></label>
+      <label>Tell us about the event<textarea rows="3"></textarea></label>
+      <button type="submit">Ask about catering</button>
+    </form>
+  </div>
+</section>
+
+<footer>Taco Wagon is a made-up business. <a href="../../">Sample design by Noah's Web Design</a></footer>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brightflow Plumbing (sample design) - Noah's Web Design</title>
+<meta name="description" content="A sample plumber website made by Noah's Web Design. Brightflow Plumbing is a made-up business, not a real company.">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light">
+<meta property="og:title" content="Sample plumber website - Noah's Web Design">
+<meta property="og:description" content="A made-up example business showing the style of site Noah builds.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f4c8a'/%3E%3Cpath d='M32 12c-8 11-13 18-13 25a13 13 0 0 0 26 0c0-7-5-14-13-25z' fill='%23ffb703'/%3E%3C/svg%3E">
+<style>
+:root{--blue:#0f4c8a;--blue2:#1f7dc9;--ink:#14233a;--mut:#4a5a70;--sun:#ffb703;--bg:#fff;--soft:#eef4fb;--line:#dbe4ef}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:var(--blue)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+h1,h2,h3{line-height:1.15;margin:0;letter-spacing:-.02em}
+.demo{background:#14233a;color:#fff;font-size:14px;text-align:center;padding:9px 16px}
+.demo a{color:#ffd166;font-weight:700}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;color:var(--ink);text-decoration:none;white-space:nowrap}
+.logo svg{width:30px;height:30px}
+nav{display:flex;gap:22px;align-items:center}
+nav a{color:var(--mut);text-decoration:none;font-weight:600;font-size:15px}
+nav a:hover{color:var(--blue)}
+.call{background:var(--sun);color:var(--ink)!important;padding:10px 16px;border-radius:10px;font-weight:800!important;white-space:nowrap}
+.call:hover{filter:brightness(1.05)}
+.hero{background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;padding:80px 0 88px}
+.hero .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.badge{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:5px 12px;border-radius:30px;font-size:14px;font-weight:600;margin-bottom:16px}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:900;margin-bottom:16px}
+.hero p{font-size:1.15rem;opacity:.95;max-width:32em;margin:0 0 26px}
+.btn{display:inline-block;padding:14px 24px;border-radius:12px;font-weight:800;text-decoration:none;border:2px solid transparent}
+.btn.sun{background:var(--sun);color:var(--ink)}
+.btn.line{border-color:rgba(255,255,255,.7);color:#fff;margin-left:8px}
+.btn:hover{transform:translateY(-1px)}
+.hero-card{background:#fff;color:var(--ink);border-radius:18px;padding:26px;box-shadow:0 20px 40px rgba(0,0,0,.2)}
+.hero-card h2{font-size:1.3rem;margin-bottom:12px}
+.hero-card ul{margin:0;padding:0;list-style:none}
+.hero-card li{padding:8px 0 8px 30px;position:relative;border-bottom:1px solid var(--line)}
+.hero-card li:last-child{border:0}
+.hero-card li:before{content:"\2713";position:absolute;left:0;color:var(--blue2);font-weight:900}
+section{padding:72px 0}
+.sec-h{max-width:640px;margin-bottom:36px}
+.sec-h h2{font-size:clamp(1.7rem,3vw,2.3rem);font-weight:900;margin-bottom:8px}
+.sec-h p{color:var(--mut);margin:0}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc div{background:var(--soft);border-radius:16px;padding:24px;border:1px solid var(--line)}
+.svc svg{width:40px;height:40px;color:var(--blue2);margin-bottom:12px}
+.svc h3{margin-bottom:6px}
+.svc p{margin:0;color:var(--mut);font-size:15px}
+.band{background:var(--ink);color:#fff;padding:44px 0}
+.band .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.band h2{font-size:1.6rem}
+.band p{margin:4px 0 0;color:#c7d3e3}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.box{border:1px solid var(--line);border-radius:16px;padding:26px}
+table{width:100%;border-collapse:collapse}
+td{padding:10px 0;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:700}
+tr:last-child td{border:0}
+.map{background:repeating-linear-gradient(45deg,#e6eef7 0 12px,#f3f7fb 12px 24px);border-radius:12px;height:170px;display:grid;place-items:center;color:var(--mut);font-weight:600;margin-top:16px;text-align:center;padding:10px}
+form{display:grid;gap:12px}
+label{font-weight:700;font-size:15px}
+input,textarea{font:inherit;width:100%;padding:11px 13px;border:1.5px solid var(--line);border-radius:10px;margin-top:4px}
+input:focus,textarea:focus{outline:none;border-color:var(--blue2)}
+button{font:inherit;background:var(--blue);color:#fff;border:0;border-radius:10px;padding:13px;font-weight:800;cursor:pointer}
+button:hover{background:var(--blue2)}
+.big{font-size:1.5rem;font-weight:900;color:var(--blue);text-decoration:none}
+footer{background:#0b1a2c;color:#b9c6d8;padding:28px 0;font-size:14px;text-align:center}
+footer a{color:#ffd166}
+@media(max-width:860px){.hero .wrap,.two{grid-template-columns:1fr}.svc{grid-template-columns:1fr 1fr}nav a:not(.call){display:none}}
+@media(max-width:560px){.svc{grid-template-columns:1fr}.hero{padding:52px 0 60px}.btn{display:block;text-align:center}.btn.line{margin:10px 0 0}section{padding:52px 0}.logo{font-size:16px}.logo svg{width:26px;height:26px}.call{padding:8px 10px;font-size:14px}}
+</style>
+</head>
+<body>
+<div class="demo">Sample design by <a href="../../">Noah's Web Design</a> - not a real business</div>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#0f4c8a"/><path d="M32 12c-8 11-13 18-13 25a13 13 0 0 0 26 0c0-7-5-14-13-25z" fill="#ffb703"/></svg>Brightflow Plumbing</a>
+    <nav><a href="#services">Services</a><a href="#hours">Hours</a><a href="#contact">Contact</a><a class="call" href="tel:5550100000">(555) 010-0000</a></nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="badge">Licensed &amp; insured &middot; Family-run</span>
+      <h1>Fast, honest plumbing repairs.</h1>
+      <p>Leaks, clogs, water heaters and everything in between. Same-day service, upfront prices and free estimates.</p>
+      <a class="btn sun" href="tel:5550100000">Call (555) 010-0000</a><a class="btn line" href="#contact">Request a free estimate</a>
+    </div>
+    <div class="hero-card">
+      <h2>Why neighbours call us</h2>
+      <ul><li>Upfront price before we start</li><li>Clean, tidy work</li><li>Same-day appointments</li><li>Free estimates</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-h"><h2>Our services</h2><p>Home and small business plumbing, done right the first time.</p></div>
+    <div class="svc">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3c-3 4-5 7-5 10a5 5 0 0 0 10 0c0-3-2-6-5-10z"/></svg><h3>Leaks &amp; pipes</h3><p>Dripping taps, burst pipes and hidden leaks found and fixed.</p></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="6" y="3" width="12" height="18" rx="3"/><path d="M10 15h4"/></svg><h3>Water heaters</h3><p>Repair and replacement, tank or tankless.</p></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M8 12h8"/></svg><h3>Drain cleaning</h3><p>Slow sinks, blocked toilets and main line clogs cleared.</p></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20h16M6 20V9l6-5 6 5v11"/></svg><h3>Remodels</h3><p>New kitchens and bathrooms plumbed in properly.</p></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v6M5 9h14l-2 11H7z"/></svg><h3>Fixtures</h3><p>Toilets, faucets, showers and garbage disposals installed.</p></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>Emergency calls</h3><p>Water where it shouldn't be? Call and we'll come fast.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <div><h2>Got a leak right now?</h2><p>Turn off the water at the main valve, then give us a call.</p></div>
+    <a class="btn sun" href="tel:5550100000">Call (555) 010-0000</a>
+  </div>
+</div>
+
+<section id="hours">
+  <div class="wrap two">
+    <div class="box">
+      <h2 style="margin-bottom:12px">Opening hours</h2>
+      <table>
+        <tr><td>Monday &ndash; Friday</td><td>7am &ndash; 6pm</td></tr>
+        <tr><td>Saturday</td><td>8am &ndash; 2pm</td></tr>
+        <tr><td>Sunday</td><td>Emergency calls only</td></tr>
+      </table>
+    </div>
+    <div class="box">
+      <h2 style="margin-bottom:12px">Where we work</h2>
+      <p style="margin:0;color:var(--mut)">We cover the whole local area and nearby towns. Not sure if we reach you? Just ask.</p>
+      <div class="map">Google Map goes here</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:var(--soft)">
+  <div class="wrap two">
+    <div>
+      <div class="sec-h"><h2>Get a free estimate</h2><p>Tell us what's going on and we'll get back to you the same day.</p></div>
+      <p style="margin:0 0 4px;color:var(--mut)">Call or text</p>
+      <a class="big" href="tel:5550100000">(555) 010-0000</a>
+      <p style="margin:16px 0 4px;color:var(--mut)">Email</p>
+      <a href="mailto:hello@example.com" style="font-weight:700">hello@example.com</a>
+    </div>
+    <form class="box" style="background:#fff" onsubmit="event.preventDefault();this.querySelector('button').textContent='This is a demo - nothing was sent';">
+      <label>Your name<input required></label>
+      <label>Phone<input type="tel" required></label>
+      <label>What do you need help with?<textarea rows="4"></textarea></label>
+      <button type="submit">Send request</button>
+    </form>
+  </div>
+</section>
+
+<footer>Brightflow Plumbing is a made-up business. <a href="../../">Sample design by Noah's Web Design</a></footer>
+</body>
+</html>
