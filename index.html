@@ -3,25 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Noah's Web Design - Websites for local businesses, $499</title>
+<title>Porchlight Web - Websites for local businesses, $499</title>
 <meta name="description" content="Clean, mobile-friendly websites for local businesses. See a free preview of your site before you pay anything. $499 one-time, optional $39/month care plan.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Noah's Web Design - Websites for local businesses">
+<meta property="og:title" content="Porchlight Web - Websites for local businesses">
+<meta property="og:site_name" content="Porchlight Web">
 <meta property="og:description" content="See a free preview of your new website before you pay anything. $499 one-time, mobile-friendly, live in about a week.">
-<meta property="og:url" content="https://spookys449-cmyk.github.io/websites/">
+<meta property="og:url" content="https://porchlightweb.github.io/">
 <meta name="twitter:card" content="summary">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#1f6f5c">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f6f5c'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='34' font-weight='700' fill='%23fff' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#8f4f0a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232b1d0e'/%3E%3Ccircle cx='16' cy='17' r='10' fill='%23f2b04c' opacity='.22'/%3E%3Cpath d='M16 4v3' stroke='%23f2b04c' stroke-width='1.6' stroke-linecap='round'/%3E%3Cpath d='M11 10l2-3h6l2 3z' fill='%23f2b04c'/%3E%3Crect x='11.5' y='10' width='9' height='11' rx='1.5' fill='%23ffe3a3' stroke='%23f2b04c' stroke-width='1.6'/%3E%3Cpath d='M16 12.5c-1.6 2-2 3.2-2 4.1a2 2 0 0 0 4 0c0-.9-.4-2.1-2-4.1z' fill='%23e8890c'/%3E%3Crect x='10' y='21' width='12' height='2.6' rx='1' fill='%23f2b04c'/%3E%3C/svg%3E">
 <style>
 :root{
-  --bg:#faf8f4;--bg2:#f2eee6;--ink:#1d2433;--mut:#525b6c;--acc:#1f6f5c;--acc-ink:#fff;--acc-soft:#e3f0ec;
+  --bg:#faf8f4;--bg2:#f2eee6;--ink:#1d2433;--mut:#525b6c;--acc:#8f4f0a;--acc-ink:#fff;--acc-soft:#fbefdc;--glow:#f2b04c;
   --card:#fff;--line:#e3ddd1;--shadow:0 10px 30px rgba(29,36,51,.09);
   --s1:8px;--s2:16px;--s3:24px;--s4:40px;--s5:72px;
   --r:14px;
 }
 @media (prefers-color-scheme:dark){
-  :root{--bg:#11151c;--bg2:#171c25;--ink:#e9ecf2;--mut:#a7afbd;--acc:#5cc8a8;--acc-ink:#0d1f19;--acc-soft:#1b2d29;
+  :root{--bg:#11151c;--bg2:#171c25;--ink:#e9ecf2;--mut:#a7afbd;--acc:#f2b04c;--acc-ink:#1f1405;--acc-soft:#2a2216;
   --card:#1a2029;--line:#2c3441;--shadow:0 10px 30px rgba(0,0,0,.35)}
 }
 *{box-sizing:border-box}
@@ -48,7 +49,7 @@ section{padding:var(--s5) 0}
 .top{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:var(--s2)}
 .logo{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--ink);text-decoration:none;letter-spacing:-.01em;white-space:nowrap}
-.logo i{width:30px;height:30px;border-radius:8px;background:var(--acc);color:var(--acc-ink);display:grid;place-items:center;font-style:normal;font-size:16px}
+.logo svg{width:32px;height:32px;flex:none;filter:drop-shadow(0 2px 6px color-mix(in srgb,var(--glow) 45%,transparent))}
 nav{display:flex;align-items:center;gap:var(--s3)}
 nav a.l{color:var(--mut);text-decoration:none;font-size:15px;font-weight:500}
 nav a.l:hover{color:var(--ink)}
@@ -125,8 +126,8 @@ nav a.l:hover{color:var(--ink)}
 /* checklist */
 ul.tick{list-style:none;padding:0;margin:var(--s2) 0 0}
 ul.tick li{padding-left:30px;position:relative;margin:10px 0}
-ul.tick li:before{content:"";position:absolute;left:0;top:4px;width:20px;height:20px;border-radius:50%;background:var(--acc-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='%231f6f5c' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat}
-@media (prefers-color-scheme:dark){ul.tick li:before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='%235cc8a8' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}}
+ul.tick li:before{content:"";position:absolute;left:0;top:4px;width:20px;height:20px;border-radius:50%;background:var(--acc-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='%238f4f0a' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat}
+@media (prefers-color-scheme:dark){ul.tick li:before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='%23f2b04c' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}}
 .getlist{columns:2;column-gap:var(--s4)}
 .getlist li{break-inside:avoid}
 
@@ -208,7 +209,7 @@ footer a{color:var(--mut)}
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="#top" aria-label="Noah's Web Design, back to top"><i aria-hidden="true">N</i><span>Noah's Web Design</span></a>
+    <a class="logo" href="/" aria-label="Porchlight Web, home"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#2b1d0e"/><circle cx="16" cy="17" r="10" fill="#f2b04c" opacity=".22"/><path d="M16 4v3" stroke="#f2b04c" stroke-width="1.6" stroke-linecap="round"/><path d="M11 10l2-3h6l2 3z" fill="#f2b04c"/><rect x="11.5" y="10" width="9" height="11" rx="1.5" fill="#ffe3a3" stroke="#f2b04c" stroke-width="1.6"/><path d="M16 12.5c-1.6 2-2 3.2-2 4.1a2 2 0 0 0 4 0c0-.9-.4-2.1-2-4.1z" fill="#e8890c"/><rect x="10" y="21" width="12" height="2.6" rx="1" fill="#f2b04c"/></svg><span>Porchlight Web</span></a>
     <nav aria-label="Main">
       <a class="l" href="#samples">Examples</a>
       <a class="l" href="#pricing">Pricing</a>
@@ -224,7 +225,7 @@ footer a{color:var(--mut)}
     <div>
       <span class="eyebrow">Websites for local businesses</span>
       <h1>A clean, mobile-friendly website for your business, for a one-time $499.</h1>
-      <p class="lead">Hi, I'm Noah. I build clean, fast websites for small businesses across the US. I do it with help from my AI assistant, Jarvis, which drafts and polishes the work quickly so I can keep prices low. You deal with a real person, and you see a free preview before you pay anything.</p>
+      <p class="lead">Hi, I'm Noah - Porchlight Web is my one-person web design studio. I build clean, fast websites for small businesses across the US. I do it with help from my AI assistant, Jarvis, which drafts and polishes the work quickly so I can keep prices low. You deal with a real person, and you see a free preview before you pay anything.</p>
       <div class="btns">
         <a class="btn" href="mailto:cozy-season@inkboxmail.com?subject=Free%20website%20preview&amp;body=Hi%20Noah%2C%0A%0AI%27d%20like%20a%20free%20preview%20of%20a%20website%20for%20my%20business.%0A%0ABusiness%20name%3A%20%0ACity%3A%20%0AWhat%20we%20do%3A%20%0A%0AThanks%2C%0A">Get my free preview</a>
         <a class="btn ghost" href="#samples">See examples</a>
@@ -288,7 +289,7 @@ footer a{color:var(--mut)}
     <h2>Sample designs</h2>
     <p class="sub">These are made-up example businesses, built to show the style. They are not real clients. Click one to open the full demo site.</p>
     <div class="grid3">
-      <a class="sample" href="samples/plumber/">
+      <a class="sample" href="/samples/plumber/">
         <div class="thumb tp" aria-hidden="true">
           <div class="bar"><i></i><i></i><i></i></div>
           <div class="t-nav"><span>Brightflow Plumbing</span><span>Services &middot; Contact</span></div>
@@ -296,7 +297,7 @@ footer a{color:var(--mut)}
         </div>
         <div class="sbody"><span class="eyebrow">Sample &middot; Plumber</span><h3>Brightflow Plumbing</h3><p>Bold and trustworthy, with the phone number front and centre for emergency calls.</p><span class="go">View demo site &rarr;</span></div>
       </a>
-      <a class="sample" href="samples/barber/">
+      <a class="sample" href="/samples/barber/">
         <div class="thumb tb" aria-hidden="true">
           <div class="bar"><i></i><i></i><i></i></div>
           <div class="t-nav"><span>Sharp Edge Barbers</span><span>Menu &middot; Book</span></div>
@@ -304,7 +305,7 @@ footer a{color:var(--mut)}
         </div>
         <div class="sbody"><span class="eyebrow">Sample &middot; Barber</span><h3>Sharp Edge Barbers</h3><p>Dark, classic look with a clear price list and opening hours.</p><span class="go">View demo site &rarr;</span></div>
       </a>
-      <a class="sample" href="samples/food-truck/">
+      <a class="sample" href="/samples/food-truck/">
         <div class="thumb tf" aria-hidden="true">
           <div class="bar"><i></i><i></i><i></i></div>
           <div class="t-nav"><span>Taco Wagon</span><span>Menu &middot; Find us</span></div>
@@ -426,7 +427,7 @@ footer a{color:var(--mut)}
 
 <footer>
   <div class="wrap">
-    <span>Noah's Web Design</span>
+    <span>Porchlight Web</span>
     <a href="mailto:cozy-season@inkboxmail.com">cozy-season@inkboxmail.com</a>
     <span>&copy; <span id="yr">2026</span></span>
   </div>
