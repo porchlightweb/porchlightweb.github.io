@@ -138,6 +138,11 @@ ul.tick li:before{content:"";position:absolute;left:0;top:4px;width:20px;height:
 .plan.main{border:2px solid var(--acc)}
 .tag{display:inline-block;font-size:.75rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--acc)}
 .plan .btn{margin-top:var(--s3);width:100%}
+.addon{margin-top:var(--s3);display:grid;grid-template-columns:1fr auto;gap:8px var(--s3);align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:var(--s3)}
+.addon h3{margin:4px 0 6px;font-size:1.15rem;line-height:1.25}
+.addon p{margin:0;color:var(--mut);max-width:62ch}
+.addon .price{font-size:1.9rem;text-align:right;white-space:nowrap}
+@media (max-width:640px){.addon{grid-template-columns:1fr}.addon .price{text-align:left}}
 
 /* steps */
 .steps{counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s3);list-style:none;padding:0;margin:0}
@@ -342,7 +347,7 @@ footer a{color:var(--mut)}
   <div class="wrap">
     <span class="eyebrow">Pricing</span>
     <h2>Straightforward pricing. No surprises.</h2>
-    <p class="sub">One price for the website. The care plan is optional.</p>
+    <p class="sub">One price for the website. The care plan and add-on are optional.</p>
     <div class="grid2">
       <div class="card plan main">
         <span class="tag">Website</span>
@@ -356,6 +361,10 @@ footer a{color:var(--mut)}
         <ul class="tick"><li>Hosting</li><li>Small edits when you need them</li><li>Keeping it online</li><li>Cancel any time</li></ul>
         <a class="btn ghost" href="#faq">Questions? See the FAQ</a>
       </div>
+    </div>
+    <div class="addon">
+      <div><span class="tag">Add-on</span><h3>Google listing setup</h3><p>I set up or tidy your Google Business Profile: hours, services, photos and a link to your new site, plus a simple message you can send customers to ask for reviews.</p></div>
+      <div class="price">$99 <small>one-time</small></div>
     </div>
   </div>
 </section>
@@ -396,6 +405,7 @@ footer a{color:var(--mut)}
     <div class="faq">
       <details><summary>Who owns the website?</summary><p>You do. The site is yours, and I can hand over the files whenever you ask.</p></details>
       <details><summary>What about hosting?</summary><p>Your site can be hosted for free on GitHub Pages, or hosting is included in the optional $39/month care plan, which also keeps your site online. If you'd rather host it somewhere else, I can give you the files.</p></details>
+      <details><summary>What does the Google listing add-on do?</summary><p>When people search for a business like yours, your Google listing is often the first thing they see. For a one-time $99 I set it up or clean it up: correct hours, services, photos and your website link, plus a ready-to-send message for asking happy customers for a review. You keep full control of the listing.</p></details>
       <details><summary>Can I make changes later?</summary><p>Yes. One round of changes is included with the website. After that, small edits are covered by the care plan, or I'll quote you a price for the change before doing it.</p></details>
       <details><summary>Do I pay before seeing anything?</summary><p>No. Nothing is paid before the preview. You see a free preview of your site first and only pay if you want to go ahead.</p></details>
       <details><summary>Is there really an AI involved?</summary><p>Yes. Jarvis, my AI assistant, helps me draft and build the site. I'm the person you talk to, and I'm your contact the whole way through.</p></details>
